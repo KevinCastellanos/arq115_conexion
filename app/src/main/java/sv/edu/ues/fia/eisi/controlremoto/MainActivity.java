@@ -2,7 +2,9 @@ package sv.edu.ues.fia.eisi.controlremoto;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.bluetooth.BluetoothAdapter;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -14,6 +16,12 @@ public class MainActivity extends AppCompatActivity {
     ImageButton btnIzquierdo;
     ImageButton btnDerecho;
     Button btnDesconectar;
+
+    // ----------------------------------------------
+    Handler bluetoothIn;
+    final int handlerState = 0;
+    private BluetoothAdapter btAdapter;
+    // ----------------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
